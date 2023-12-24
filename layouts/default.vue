@@ -5,3 +5,4 @@
     <BottomNav />
   </div>
 </template>
+

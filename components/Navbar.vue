@@ -1,19 +1,19 @@
 <template>
   <nav
-    class="hidden sm:flex w-screen flex-row items-center justify-between sm:px-16 md:px-24 lg:px-32 py-4 bg-gunmetal dark:bg-purp"
+    class="hidden sm:flex flex-row items-center justify-between sm:px-16 md:px-24 lg:px-32 py-4 bg-gunmetal dark:bg-ultraviolet"
   >
-    <div class="logo flex justify-center items-center gap-5">
+    <NuxtLink to="/" class="logo flex justify-center items-center gap-5">
       <img
         class="rounded-lg max-w-12"
         :src="profileLogo.imageUrl"
         :alt="profileLogo.logoText"
         srcset=""
       />
-      <span class="text-background text-2xl">{{ profileLogo.logoText }}</span>
-    </div>
+      <span class="text-background text-2xl font-medium">{{ profileLogo.logoText }}</span>
+    </NuxtLink>
     <div class="justify-between gap-3">
       <NuxtLink
-        class="mx-4 text-background"
+        class="mx-4 text-background font-medium hover:text-platinum"
         v-for="link in links"
         :to="link.path"
         :key="link.id"
@@ -43,6 +43,7 @@ const links = ref([
 const isActive = (path: string) => {
   return useRoute().path === path
 }
+
 </script>
 
 <style scoped>
