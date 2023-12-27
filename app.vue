@@ -12,7 +12,7 @@ watchEffect(() => {
   const cleanedPath = path === '/' ? 'Home' : path.slice(1);
 
   useHead({
-    title: `${cleanedPath} - Bananalemon`,
+    title: `${cleanedPath}`,
     ogTitle: `${cleanedPath}`,
     htmlAttrs: {
       lang: 'en',

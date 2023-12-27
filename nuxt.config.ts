@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   },
 
   strapi: {
-    url: 'http://localhost:4000'
-  }
+    url: process.env.STRAPI_URL ?? 'http://localhost:1337',
+  },
+  
 })
