@@ -48,6 +48,8 @@ export const section = `
     ... on ComponentHomepageSection {
       title
       details
+      position
+      ${image}
       iconGroup {
         title
         ${image}
@@ -69,3 +71,32 @@ export const hero = `
       }
     }
   `;
+
+
+
+export const qlNavbar = `
+  query {
+    global {
+      data {
+        attributes {
+          navbar {
+            title
+            image {
+              data {
+                attributes {
+                  alternativeText
+                  url
+                }
+              }
+            }
+          }
+          links {
+            id
+            text
+            links
+          }
+        }
+      }
+    }
+  }
+`

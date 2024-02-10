@@ -9,7 +9,6 @@
         class="flex flex-col items-center"
       >
         <Icon :name="link.icon" :class="getIconClasses(link)" class="mb-1" />
-        <!-- <span :class="{ 'text-platinum': isActive(link.path), 'text-gray-600': !isActive(link.path) }">{{ link.label }}</span> -->
       </NuxtLink>
     </div>
   </nav>
@@ -37,8 +36,7 @@ const getIconClasses = (link) => {
   return {
     'fill-current': true,
     'text-platinum': isActive(link.path),
-    'text-gray-600': !isActive(link.path),
-    // Add more classes as needed
+    'text-gray-500': !isActive(link.path),
   }
 }
 </script>

@@ -1,63 +1,69 @@
-<template>
-  <nav
-    class="hidden sm:flex flex-row items-center justify-between sm:px-16 md:px-24 lg:px-32 py-4 bg-gunmetal dark:bg-ultraviolet"
-  >
-    <NuxtLink to="/" class="logo flex justify-center items-center gap-5">
-      <img
-        class="rounded-lg max-w-12"
-        :src="profileLogo.imageUrl"
-        :alt="profileLogo.logoText"
-        srcset=""
-      />
-      <span class="text-background text-2xl font-medium">{{ profileLogo.logoText }}</span>
-    </NuxtLink>
-    <div class="justify-between gap-3">
-      <NuxtLink
-        class="mx-4 text-background font-medium hover:text-platinum"
-        v-for="link in links"
-        :to="link.path"
-        :key="link.id"
-        :class="{ 'underline-offset': isActive(link.path) }"
-      >
-        {{ link.label }}
+  <template>
+    <nav
+      class="hidden sm:flex flex-row items-center justify-between sm:px-12 md:px-24 lg:px-32 py-4 bg-gunmetal dark:bg-ultraviolet fixed w-screen  "
+    >
+      <NuxtLink to="/" class="logo flex justify-center items-center gap-5">
+        <img
+          class="rounded-lg max-w-12"
+          :src="useStrapiMedia(profileLogo?.image.data.attributes.url) ?? ''"
+          :alt="profileLogo?.image?.data?.attributes?.alternativeText || ''"
+          srcset=""
+        />
+        <span class="text-background text-2xl font-josefin font-semibold subpixel-antialiased tracking-wider mt-auto">{{ profileLogo?.title }}</span>
       </NuxtLink>
-    </div>
-  </nav>
-</template>
+      <div class="justify-between gap-3">
+        <NuxtLink
+          class="mx-4 text-background font-josefin font-normal tracking-wide hover:text-platinum"
+          v-for="item in navlink"
+          :to="item?.links || '/'"
+          :key="item?.id"
+          :class="{ 'underline-offset': isActive(item?.links) }"
+        >
+          {{ item?.text }}
+        </NuxtLink>
+      </div>
+    </nav>
+  </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
+  <script setup lang="ts">
+  import { ref, onBeforeMount, reactive } from 'vue'
+  import { useRoute } from 'vue-router'
 
-const profileLogo = ref({
-  imageUrl: 'https://storage.googleapis.com/strapi-bananalemon/nata.png',
-  logoText: 'Bananalemon',
-})
+  const ql = useStrapiGraphQL()
 
-const links = ref([
-  { id: 1, label: 'Home', path: '/' },
-  { id: 2, label: 'Project', path: '/projects' },
-  { id: 3, label: 'Blog', path: '/blog' },
-  { id: 4, label: 'Contact', path: '/contact' },
-])
+  const profileLogo = ref<Navbar | null>(null)
+  const navlink = reactive<NavLinks[]>([])
 
-const isActive = (path: string) => {
-  return useRoute().path === path
-}
+  onBeforeMount(async () => {
+    try {
+      const { data }: any = await ql(qlNavbar)
+      const { navbar, links } = data?.global.data.attributes
+      profileLogo.value = navbar
+      navlink.length = 0 // Clear existing data before updating
+      navlink.push(...links)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  })
 
-</script>
+  const isActive = (path: string) => {
+    return useRoute().path === path
+  }
 
-<style scoped>
-.underline-offset {
-  position: relative;
-}
+  </script>
 
-.underline-offset::after {
-  content: '';
-  position: absolute;
-  width: calc(100% - 10px); /* Adjust the offset as needed */
-  height: 2px; /* Adjust the thickness of the underline as needed */
-  background-color: #e5e5e5; /* Adjust the color of the underline as needed */
-  bottom: -5px; /* Adjust the distance from the text as needed */
-  left: 5px; /* Adjust the offset from the text as needed */
-}
-</style>
+  <style scoped>
+  .underline-offset {
+    position: relative;
+  }
+
+  .underline-offset::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 10px); /* Adjust the offset as needed */
+    height: 2px; /* Adjust the thickness of the underline as needed */
+    background-color: #e5e5e5; /* Adjust the color of the underline as needed */
+    bottom: -8px; /* Adjust the distance from the text as needed */
+    left: 5px; /* Adjust the offset from the text as needed */
+  }
+  </style>
