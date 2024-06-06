@@ -1,6 +1,6 @@
   <template>
     <nav
-      class="hidden sm:flex flex-row items-center justify-between sm:px-12 md:px-24 lg:px-32 py-4 bg-gunmetal dark:bg-ultraviolet fixed w-screen  "
+      class="hidden sm:flex flex-row items-center justify-between sm:px-12 md:px-24 lg:px-32 py-4 bg-ultraviolet absolute w-screen  "
     >
       <NuxtLink to="/" class="logo flex justify-center items-center gap-5">
         <img
@@ -9,11 +9,11 @@
           :alt="profileLogo?.image?.data?.attributes?.alternativeText || ''"
           srcset=""
         />
-        <span class="text-background text-2xl font-josefin font-semibold subpixel-antialiased tracking-wider mt-auto">{{ profileLogo?.title }}</span>
+        <span class="text-white text-2xl font-josefin font-semibold subpixel-antialiased tracking-wider mt-auto">{{ profileLogo?.title }}</span>
       </NuxtLink>
       <div class="justify-between gap-3">
         <NuxtLink
-          class="mx-4 text-background font-josefin font-normal tracking-wide hover:text-platinum"
+          class="mx-4 text-white font-josefin font-normal tracking-wide hover:text-platinum"
           v-for="item in navlink"
           :to="item?.links || '/'"
           :key="item?.id"
@@ -60,7 +60,7 @@
   .underline-offset::after {
     content: '';
     position: absolute;
-    width: calc(100% - 10px); /* Adjust the offset as needed */
+    width: calc(100% - 8px); /* Adjust the offset as needed */
     height: 2px; /* Adjust the thickness of the underline as needed */
     background-color: #e5e5e5; /* Adjust the color of the underline as needed */
     bottom: -8px; /* Adjust the distance from the text as needed */

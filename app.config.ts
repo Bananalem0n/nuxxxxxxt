@@ -9,5 +9,8 @@ export default defineAppConfig({
     aliases: {
       'nuxt': 'logos:nuxt-icon',
     }
+  },
+  ui: {
+    primary: 'indigo',
   }
 })

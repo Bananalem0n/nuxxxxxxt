@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-background dark:bg-gunmetal flex flex-col md:flex-row sm:p-16 md:p-16 pt-14 sm:pt-1 items-center h-screen md:justify-between">
+  <section class="bg-gunmetal flex flex-col md:flex-row sm:p-16 md:p-16 pt-14 sm:pt-6 items-center h-screen md:justify-between ">
     <div class="sm:py-24 md:py-44 lg:pl-32 w-full md:w-1/2 md:flex flex-col justify-center">
       <!-- Hero Title -->
       <HomeHeroHeader :title="payload?.name" :subtitle="payload?.hello" />
@@ -21,7 +21,7 @@
       v-if="payload?.image.data.attributes.url || payload?.image.data.attributes.alternativeText"
       :src="useStrapiMedia(payload?.image.data.attributes.url)"
       :alt="payload?.image.data.attributes.alternativeText"
-      class="py-32 sm:py-16 px-10 lg:p-0 sm:max-w-full md:max-w-md lg:mr-44 lg:max-w-lg w-full object-contain"
+      class="py-32 sm:py-16 px-10 lg:p-0 sm:max-w-full md:max-w-md lg:mr-44 lg:max-w-lg w-full object-cover"
       fit="content"
     />
   </section>

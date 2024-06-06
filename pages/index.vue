@@ -1,5 +1,5 @@
 <template>
-  <HomeHero :payload="heroData" />
+  <HomeHero class="min-h-screen max-h-fit bg-gunmetal" :payload="heroData" />
   <!-- <HomeSection :payload="sectionData" /> -->
 </template>
 
@@ -12,7 +12,7 @@ import { hero } from '~/composables/graphql';
 const ql = useStrapiGraphQL();
 
 const heroData = ref<Hero | null>(null);
-const sectionData = ref<Section | null>(null);
+// const sectionData = ref<Section | null>(null);
 
 // fetch data from strapi graphql with params of collection name, and components type
 const query = await queryPage('home', [hero, section]); 
@@ -21,7 +21,7 @@ onBeforeMount(async () => {
   const { data }: any = await ql(query);
   const { components } = data?.home.data.attributes;
   heroData.value = components[0]
-  sectionData.value = components[1]
+  // sectionData.value = components[1]
 });
 
 </script>

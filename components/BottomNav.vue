@@ -20,7 +20,7 @@ import { ref } from 'vue'
 const links = ref([
   { id: 1, icon: 'ic:round-add-home', label: 'Home', path: '/' },
   { id: 2, icon: 'ic:round-work', label: 'Project', path: '/projects' },
-  { id: 3, icon: 'uis:web-grid', label: 'Blog', path: '/blog' },
+  // { id: 3, icon: 'uis:web-grid', label: 'Blog', path: '/blog' },
   { id: 4, icon: 'bxs:contact', label: 'Contact', path: '/contact' },
 ])
 

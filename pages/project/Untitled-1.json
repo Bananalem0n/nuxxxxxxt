@@ -1,0 +1,52 @@
+{
+	"attributes":
+	{
+		"slug": "lidar-robot-1",
+		"title": "Lidar Robot",
+		"content":
+		{
+			"description": "Autonomous robots are machines capable of performing tasks or actions without direct human control. These robots are equipped with sensors, processors, and actuators that enable them to perceive their environment, make decisions based on that information, and execute actions accordingly. The autonomy of these robots can vary, ranging from simple tasks in a controlled environment to complex functions in dynamic and unpredictable settings. Examples include self-driving cars, drones, and robotic vacuum cleaners. The goal is to enable robots to operate independently, adapting to changing conditions and completing tasks efficiently.",
+			"image":
+			{
+				"data": [
+				{
+					"attributes":
+					{
+						"url": "/uploads/robot_Card_9d98fbc44c.svg"
+					}
+				},
+				{
+					"attributes":
+					{
+						"url": "/uploads/steam_134de35b1e.jfif"
+					}
+				},
+				{
+					"attributes":
+					{
+						"url": "/uploads/nata_6d456f621a.png"
+					}
+				}]
+			},
+			"projectLink": [
+			{
+				"id": "1",
+				"links": "https://github.com/Bananalem0n",
+				"provider": "Github",
+				"icon": "uil:github"
+			},
+			{
+				"id": "2",
+				"links": "https://youtube.com",
+				"provider": "Youtube",
+				"icon": "mdi:youtube"
+			}],
+			"contributor": [
+			{
+				"links": "https://linkedin.com/in/bananalemon",
+				"name": "Ukasyah Nata",
+				"jobdesk": "Project Manager"
+			}]
+		}
+	}
+}

@@ -10,7 +10,7 @@ export default {
         silver: '#BFC0C0',
         platinum: '#e5e5e5',
         ultraviolet: '#625D98',
-        background: '#FAFAFA',
+        background: '#DEDEDE',
         purp: '#4B467F',
       },
       fontFamily: {

@@ -63,17 +63,27 @@ export interface ProjectOverview {
         cover: {
             text: string | undefined;
             image: {
-                data:Image
+                data: Image
             };
-            project_category: project_category
+            project_category: ProjectCategory
         };
     }
 }
 
-export interface project_category {
+export interface ProjectCategory {
     data: {
         attributes: {
             category: string;
         }
     }
+}
+
+export interface Author {
+    name: string
+    email?: string
+    gender: string
+    image?: {
+        data: Image;
+    }
+    description?: string
 }
