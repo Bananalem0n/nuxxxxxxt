@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   },
 
   strapi: {
-    url: process.env.STRAPI_URL ?? 'https://strapi-porto-6cqnhjlcuq-et.a.run.app',
+    url: process.env.STRAPI_URL ?? 'https://strapi-portofolio-345whfpqfa-et.a.run.app',
     cookieName: 'strapi_jwt'
   },
 
