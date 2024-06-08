@@ -18,7 +18,8 @@
         >
           <img
             :src="useStrapiMedia(item.attributes.url)"
-            class="bg-payne min-h-fit max-h-[20rem] sm:max-h-[25rem] md:max-h-[30rem] lg:max-h-[35rem] xl:max-h-[40rem] 2xl:max-h-[38rem] w-full object-cover shadow-lg"
+            draggable="false"
+            class="bg-payne min-h-fit max-h-[20rem] sm:max-h-[25rem] md:max-h-[30rem] lg:max-h-[35rem] xl:max-h-[40rem] 2xl:max-h-[38rem] w-full object-fit shadow-lg"
           />
         </UCarousel>
       </article>
