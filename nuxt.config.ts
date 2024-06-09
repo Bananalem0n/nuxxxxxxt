@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     'assets/main.css',
   ],
 
-  image: {
+  image: {  
     format: ['jpg', 'png', 'gif', 'jpeg', 'webp', 'avif'],
     domains: ['nuxtjs.org', 'storage.googleapis.com'],
     strapi: {}
