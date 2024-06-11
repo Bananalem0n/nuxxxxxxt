@@ -15,7 +15,7 @@
         <NuxtLink :to="'/project/' + project.attributes.slug">
           <NuxtImg
             class="w-full h-36 object-cover"
-            :src="useStrapiMedia(project.attributes.cover.image.data.attributes.url)"
+            :src="project.attributes.cover.image.data.attributes.url"
             :alt="project.attributes.cover.image.data.attributes.alternativeText"
           />
           <div class="flex flex-row justify-between px-3 py-3 text-white antialiased gap-3">

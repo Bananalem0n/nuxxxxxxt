@@ -22,7 +22,7 @@
           indicators
         >
           <img
-            :src="useStrapiMedia(item.attributes.url)"
+            :src="item.attributes.url"
             draggable="false"
             class="bg-gunmetal min-h-fit max-h-[20rem] sm:max-h-[25rem] md:max-h-[30rem] lg:max-h-[35rem] xl:max-h-[40rem] 2xl:max-h-[38rem] w-full object-fit shadow-lg"
           />

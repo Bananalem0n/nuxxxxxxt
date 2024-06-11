@@ -19,7 +19,7 @@
     <!-- Image Hero -->
     <NuxtImg
       v-if="payload?.image.data.attributes.url || payload?.image.data.attributes.alternativeText"
-      :src="useStrapiMedia(payload?.image.data.attributes.url)"
+      :src="payload?.image.data.attributes.url"
       :alt="payload?.image.data.attributes.alternativeText"
       class="py-32 sm:py-16 px-10 lg:p-0 sm:max-w-full md:max-w-md lg:mr-44 lg:max-w-lg w-full object-cover"
       fit="content"

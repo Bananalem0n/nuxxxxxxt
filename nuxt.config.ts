@@ -28,8 +28,8 @@ export default defineNuxtConfig({
   ],
 
   image: {  
-    format: ['jpg', 'png', 'gif', 'jpeg', 'webp', 'avif'],
-    domains: ['nuxtjs.org', 'storage.googleapis.com'],
+    format: ['jpg', 'png', 'gif', 'jpeg', 'webp', 'avif','svg'],
+    domains: ['nuxtjs.org', 'storage.googleapis.com', ],
     strapi: {}
   },
 

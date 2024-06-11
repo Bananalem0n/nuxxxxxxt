@@ -5,7 +5,7 @@
       <NuxtLink to="/" class="logo flex justify-center items-center gap-5">
         <img
           class="rounded-lg max-w-12"
-          :src="useStrapiMedia(profileLogo?.image.data.attributes.url) ?? ''"
+          :src="profileLogo?.image.data.attributes.url ?? ''"
           :alt="profileLogo?.image?.data?.attributes?.alternativeText || ''"
           srcset=""
         />

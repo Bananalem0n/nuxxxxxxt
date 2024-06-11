@@ -6,7 +6,7 @@
     <div class="w-full lg:w-5/12 lg:p-16 xl:p-24">
       <NuxtImg
         v-if="payload?.image.data.attributes.url || payload?.image.data.attributes.alternativeText"
-        :src="useStrapiMedia(payload?.image.data.attributes.url)"
+        :src="payload?.image.data.attributes.url"
         :alt="payload?.image.data.attributes.alternativeText"
         class="hidden sm:block py-44 sm:py-16 sm:px-32 lg:p-0 lg:mr-12 xl:mr-36 sm:max-w-full h-auto md:max-w-md lg:max-w-lg w-full object-contain"
       />
@@ -45,7 +45,7 @@
         <NuxtImg
           v-for="icon in payload?.iconGroup.image.data"
           :key="icon.attributes.url"
-          :src="useStrapiMedia(icon.attributes.url)"
+          :src="icon.attributes.url"
           class="w-12 h-12 max-w-full"
         />
       </div>
