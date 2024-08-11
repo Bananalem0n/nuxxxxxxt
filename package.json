@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy": "nuxt build && node .output/server/index.mjs"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
