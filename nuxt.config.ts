@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   // },
 
   strapi: {
-    url: process.env.STRAPI_URL ?? 'http://34.101.150.104:1337',
+    url: process.env.STRAPI_URL ?? 'https://strapi-345whfpqfa-et.a.run.app',
   },
 
 })
