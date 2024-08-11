@@ -27,11 +27,11 @@ export default defineNuxtConfig({
     'assets/main.css',
   ],
 
-  image: {  
-    format: ['jpg', 'png', 'gif', 'jpeg', 'webp', 'avif','svg'],
-    domains: ['nuxtjs.org', 'storage.googleapis.com'],
-    strapi: {}
-  },
+  // image: {  
+  //   format: ['jpg', 'png', 'gif', 'jpeg', 'webp', 'avif','svg'],
+  //   domains: ['nuxtjs.org', 'storage.googleapis.com', 'http://34.101.150.104/'],
+  //   strapi: {}
+  // },
 
   strapi: {
     url: process.env.STRAPI_URL ?? 'http://34.101.150.104:1337/',
