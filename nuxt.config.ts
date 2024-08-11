@@ -29,13 +29,12 @@ export default defineNuxtConfig({
 
   image: {  
     format: ['jpg', 'png', 'gif', 'jpeg', 'webp', 'avif','svg'],
-    domains: ['nuxtjs.org', 'storage.googleapis.com', ],
+    domains: ['nuxtjs.org', 'storage.googleapis.com', 'localhost'],
     strapi: {}
   },
 
   strapi: {
-    url: process.env.STRAPI_URL ?? 'https://strapi-portofolio-345whfpqfa-et.a.run.app',
-    cookieName: 'strapi_jwt'
+    url: process.env.STRAPI_URL ?? 'http://localhost:4001/',
   },
 
 })

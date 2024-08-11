@@ -24,6 +24,6 @@ onBeforeMount(async () => {
   // sectionData.value = components[1]
 });
 
-</script>
-  
 
+
+</script>    
